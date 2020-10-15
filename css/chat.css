@@ -1,0 +1,140 @@
+.chat-container{
+    height: 100vh;
+    
+}
+.chat-container .chat-header{
+    text-align: center;
+    height: 64px;
+    background: #037BFE;
+    line-height: 64px;
+    color: #ffffff;
+    font-size: 28px;
+    font-family: sans-serif;
+}
+.chat-container .main {
+     height: calc(100% - 64px);
+     display: flex;
+}
+.chat-container .main .conversation-detail{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    width: 85%;
+}
+.chat-container  .conversation-header{
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 24px;
+}
+.chat-container .main .conversation-detail  .list-message{
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-top:10px;
+    overflow-y: auto;
+}
+.chat-container .conversation-detail #send-message-form{
+    height: 64px;
+    border-top:1px solid #dbdbdb;
+    line-height: 64px;
+    display: flex;
+    
+    
+}
+.chat-container .conversation-detail #send-message-form input{
+    flex-grow: 1;
+    border:none;
+    outline: none;
+    padding-left: 20px;
+}
+#send-message-form button {
+    background-color: white;
+    color:#037BFE;
+    font-size: 25px;
+    border:none;
+}
+.chat-container .message-container .content{
+    max-width: 40%;
+    max-width: max-content;
+    border-radius: 5px;
+    padding:7px 10px;
+    margin-bottom:10px;
+    word-break: break-all;
+    font-family: inherit;
+}
+.chat-container .message-container.their .content {
+    background-color: #dbdadb;
+}
+.chat-container .message-container.mine .content{
+    background-color:rgb(0, 132, 255);
+    color:#ffffff;
+}
+.chat-container .message-container.mine{
+    display:flex;
+    justify-content: flex-end;
+}
+.chat-container .aside-left {
+    height: 100%;
+    width: 15%;
+    border-right: 1px solid #dbdbdb;
+}
+.chat-container .aside-left .create-conversation {
+    border-bottom:1px solid #dbdbdb;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+}
+.chat-container .list-conversations .conversation{
+    padding:5px 10px;
+    position: relative;
+    
+}
+.chat-container .list-conversations .conversation.current{
+    background-color: #dbdbdb;
+}
+.chat-container .aside-right {
+    padding:10px;
+    border-left: 1px solid #dbdbdb;
+    width: 15%;
+}
+.chat-container .aside-right .user {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-container #add-user-form{
+    margin-top:15px;
+}
+.chat-container .conversation .notification {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    top:15px;
+    background-color:rgb(0, 132, 255);
+    border-radius: 50%;
+    display: none;
+}
+@media screen and (max-width : 768px) {
+    .aside-right{
+        display:none;
+    }
+    .conversation-num-user{
+        display: none;
+    }
+    .chat-container .list-conversations .conversation{
+        border-radius: 50%;
+        border:1px solid #dbdbdb;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* margin-bottom: 10px; */
+        margin: 5px auto;
+    }
+    .chat-container .conversation .notification{
+        top:23px;
+        right: 5px;
+    }
+}
